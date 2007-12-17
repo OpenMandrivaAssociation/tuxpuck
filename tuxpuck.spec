@@ -10,7 +10,6 @@ Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.efd.lth.se/~d00jkr/tuxpuck/
 License:	GPL
 Group:		Games/Arcade
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel png-devel oggvorbis-devel libz-devel jpeg-devel
 BuildRequires:	freetype2-devel
 
