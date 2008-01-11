@@ -29,11 +29,6 @@ CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" make
 rm -rf $RPM_BUILD_ROOT
 install -m755 %{name} -D $RPM_BUILD_ROOT%{_gamesbindir}/%{name}
 
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): needs=x11 section="More Applications/Games/Arcade" title="Tuxpuck" \
-  longtitle="Clone of ShufflePuck Cafe" icon="arcade_section.png" command="%{_gamesbindir}/%{name}" xdg="true"
-EOF
 
 install -m 755 -d $RPM_BUILD_ROOT%{_datadir}/applications/
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -63,6 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING 
 %{_gamesbindir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
-%{_menudir}/%{name}
 
 
