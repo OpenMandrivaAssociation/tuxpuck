@@ -1,14 +1,14 @@
 %define	name	tuxpuck
 %define	version	0.8.2
-%define	release	%mkrel 12
+%define	release	%mkrel 13
 
 Summary:	Clone of ShufflePuck Cafe historical game
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	%{name}-%{version}.tar.bz2
-URL:		http://www.efd.lth.se/~d00jkr/tuxpuck/
-License:	GPL
+URL:		http://altruistic.lbl.gov/mirrors/ubuntu/pool/universe/t/tuxpuck/
+License:	GPLv2
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel png-devel oggvorbis-devel libz-devel jpeg-devel
