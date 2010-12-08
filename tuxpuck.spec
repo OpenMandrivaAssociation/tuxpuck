@@ -1,6 +1,6 @@
 %define	name	tuxpuck
 %define	version	0.8.2
-%define	release	%mkrel 13
+%define	release	%mkrel 14
 
 Summary:	Clone of ShufflePuck Cafe historical game
 Name:		%{name}
