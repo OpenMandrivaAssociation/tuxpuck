@@ -1,18 +1,14 @@
-%define	name	tuxpuck
-%define	version	0.8.2
-%define	release	%mkrel 14
-
 Summary:	Clone of ShufflePuck Cafe historical game
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		tuxpuck
+Version:	0.8.2
+Release:	15
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://altruistic.lbl.gov/mirrors/ubuntu/pool/universe/t/tuxpuck/
 License:	GPLv2
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel png-devel oggvorbis-devel libz-devel jpeg-devel
-BuildRequires:	freetype2-devel
+BuildRequires:	pkgconfig(freetype2)
 
 %description
 Anyone remember "Shufflepuck Cafe" for the Amiga/AtariST ?
@@ -26,7 +22,6 @@ perl -pi -e 's/`sdl-config --cflags`/`sdl-config --cflags` `freetype-config --cf
 CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 install -m755 %{name} -D $RPM_BUILD_ROOT%{_gamesbindir}/%{name}
 
 
@@ -44,21 +39,7 @@ Categories=X-MandrivaLinux-MoreApplications-Games-Arcade;Game;ArcadeGame;
 EOF
 
 
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%endif
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %doc COPYING 
 %{_gamesbindir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
