@@ -1,7 +1,7 @@
 Summary:	Clone of ShufflePuck Cafe historical game
 Name:		tuxpuck
 Version:	0.8.2
-Release:	15
+Release:	16
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://altruistic.lbl.gov/mirrors/ubuntu/pool/universe/t/tuxpuck/
 License:	GPLv2
