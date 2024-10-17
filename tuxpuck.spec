@@ -3,7 +3,7 @@ Name:		tuxpuck
 Version:	0.8.2
 Release:	16
 Source0:	%{name}-%{version}.tar.bz2
-URL:		http://altruistic.lbl.gov/mirrors/ubuntu/pool/universe/t/tuxpuck/
+URL:		https://altruistic.lbl.gov/mirrors/ubuntu/pool/universe/t/tuxpuck/
 License:	GPLv2
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
